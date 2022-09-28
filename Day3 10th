@@ -1,0 +1,45 @@
+import java.util.*;
+public class count{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		try
+		{
+			float a,neg=0,pos=0;
+			int negc=0,posc=0;
+			double avg,avg2;
+			for(int i=1;;i++)
+			{
+				a=sc.nextInt();
+				if(a==-1)
+				{
+					System.out.print("Value is -1 so input is terminate\n");
+					break;
+				}
+				else if(a<0)
+				{
+					neg=neg+a;
+					negc++;
+				}
+				else if(a>0)
+				{
+					pos=pos+a;
+					posc++;
+				}	
+			}
+			avg=pos/posc;
+			avg2=neg/negc;
+			
+				System.out.print("Positive : "+ avg+"\n");
+				System.out.print("Positive : "+ avg2);	
+		}
+		catch(InputMismatchException v)
+		{
+			System.out.print("Invalid Input !!!");
+		 
+		}
+		
+		
+		
+		
+	}
+}
