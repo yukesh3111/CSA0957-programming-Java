@@ -1,0 +1,19 @@
+import java.util.*;
+public class fibo{
+public static void main(String args[]){
+Scanner obj=new Scanner(System.in);
+int n,a=0,b=1,c,f=0,d=0;
+System.out.println("enter the limit for fibonacci series:");
+n=obj.nextInt();
+for(int i=2;f<n;i++){
+c=a+b;
+a=b;
+b=c;
+if(i%2==0){
+d=d+c;
+f++;
+}
+}
+System.out.println(d);
+}
+}
