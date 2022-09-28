@@ -1,0 +1,74 @@
+import java.util.*;
+public class primeandcomposite{
+	public static void main(String[] args){
+		Scanner sc=new Scanner(System.in);
+		try{
+			int[] arr=new int[50];
+			int  n,v=0;
+			int count=0,count1=0;
+			System.out.print("Enter number of array : ");
+			n=sc.nextInt();
+			if(n>0)
+			{
+				for(int i=0;i<n;i++)
+				{
+					System.out.println("Enter array element : ");
+					arr[i]=sc.nextInt();
+				}
+				for(int i=0;i<n;i++)
+				{
+					int flage=0;
+					for(int j=2;j<=arr[i];j++)
+					{
+						
+							if(arr[i]%j==0)
+							{
+								flage++;
+							}
+						
+						
+					}
+					if(arr[i]>0)
+					{
+						if(flage==1){
+							count++;
+						}
+						else
+						{
+							count1++;
+						}
+					}
+					else
+					{
+						v=1;
+					}
+				
+					
+				}
+				if(v==0)
+				{
+					System.out.println("Prime number are : "+count);
+					System.out.println("Composite number are : "+count1);
+				}
+				else
+				{
+					System.out.print("Invalid");
+				}
+			}
+			else
+			{
+				System.out.println("Invalid Input");
+
+			}
+			
+
+		}
+		catch(InputMismatchException v)
+		{
+			System.out.println("Invalid Input");
+		}
+		
+		
+
+	}
+}
