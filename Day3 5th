@@ -1,0 +1,33 @@
+import java.util.*;
+public class fact{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		try
+		{
+			int a,fact=1;
+			System.out.print("Enter a number : ");
+			a=sc.nextInt();
+			if(a>0)
+			{
+				for(int i=1;i<=a;i++)
+				{
+					fact=fact*i;
+				}
+				System.out.print("Factorial is "+fact);	
+			}
+			else
+			{
+				System.out.print("Invalid Input!!!!");
+			}
+
+				
+		}
+		catch(InputMismatchException v)
+		{
+			System.out.print("Invaild Input!!!");
+		}
+			
+	
+		
+	}
+}
