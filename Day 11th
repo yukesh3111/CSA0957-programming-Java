@@ -1,0 +1,36 @@
+import java.util.*;
+public class exp11th{
+public static void main(String[] args){
+Scanner obj=new Scanner(System.in);
+int n,i,a,b;
+System.out.println("enter the starting value:");
+a=obj.nextInt();
+System.out.println("enter the ending value:");
+b=obj.nextInt();
+if(a>0 && b>0 && a!=b && a<b)
+{
+for(i=a;i<=b;i++){
+int c=i*i;
+int r,s=0;
+int c1=c;
+while(c!=0){
+r=c%10;
+s=s+r;
+c=c/10;
+}
+if(s<10 && c1<b){
+System.out.println(i*i);
+}
+}
+}
+if(a==50)
+{
+	System.out.print("No number are found");
+}
+else
+{
+	System.out.print("Invalid");
+}
+
+}
+}
